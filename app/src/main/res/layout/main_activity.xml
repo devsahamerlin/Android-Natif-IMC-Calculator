@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/background_color">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quel est votre IMC ?"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_marginBottom="32dp"
+        android:padding="16dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/header_background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/input_container_background"
+        android:padding="24dp"
+        android:layout_marginBottom="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="Poids"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/label_text" />
+
+            <EditText
+                android:id="@+id/editTextPoids"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Exemple: 87"
+                android:inputType="numberDecimal"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:background="@drawable/edittext_background"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/black"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kg"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/unit_text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="Taille"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/label_text" />
+
+            <EditText
+                android:id="@+id/editTextTaille"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Exemple: 177"
+                android:inputType="numberDecimal"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:background="@drawable/edittext_background"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cm"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/unit_text" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonCalculer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculer IMC"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_background"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutViewResultat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/result_container_background"
+        android:padding="24dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/textViewResultat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/result_text"
+            android:layout_marginBottom="16dp" />
+
+        <ImageView
+            android:id="@+id/imageViewCategorie"
+            android:layout_width="160dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="0dp"
+            android:contentDescription="Représentation visuelle de la catégorie IMC" />
+
+        <TextView
+            android:id="@+id/textViewCategorie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sur Poids"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:padding="12dp"
+            android:gravity="center" />
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/action_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/imc_bodies"/>
+</LinearLayout>
